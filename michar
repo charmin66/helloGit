@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            padding: 0px;
+            margin: auto;
+            width: 1300px;
+            height: auto;
+            background: #fffbfb;
+           position: relative;
+        }
+        .th{
+            display: inline-block;
+            width: 310px;
+            height: 100px;
+            border: 1px solid #bebebf;
+            border-radius: 20px;
+            margin-top: 60px;
+            background: #FFFFFF;
+        }
+        .zt{
+            font-family: 微软雅黑;
+            font-size: 20px;
+
+        }
+        .tex {
+            height: 30px;
+            width: 200px;
+            margin-top: 30px;
+        }
+        .butt{
+            height: 30px;
+            width: 100px;
+            background-color: #3cce24;
+            color: #FFFFFF;
+            border-radius:8px ;
+            margin-top: 30px;
+
+        }
+        .Yx{
+            height: 90px;
+            width: 90px;
+            border:1px solid #a7a4a4 ;
+            background: #95dede;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 100px;
+            margin-top: 20px;
+
+
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {display:none;}
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #09f13c;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 100px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="th"><a class="zt">流程号: </a><input type="text" class="tex">
+</div>
+<div class="th"><a class="zt">启动时间: </a> <input type="date" class="tex"></div>
+<div class="th"><a class="zt">备注: </a><input type="text" class="tex"></div>
+<div class="th"> <span><button type="text" name="" value="" class="butt">复制</button>
+    <button type="text1" name="" value="" class="butt">编辑</button></span></div>
+<div style="display: inline-block">
+    <div><a class="zt">状态: </a></div>
+<div style="float:left; margin-left: 60px">
+    <label class="switch">
+       dd <input type="checkbox" name="check" checked>
+        <div class="slider round"></div>
+    </label>
+ </div>
+</div>
+<div style="width:1300px;height: 130px;border: 1px solid #bdbcbc;background: #FFFFFF;border-radius: 35px;margin-top: 10px">
+   <div class="Yx">111111</div>
+   <div class="Yx">111</div>
+   <div class="Yx">111</div>
+   <div class="Yx">111</div>
+
+
+
+</div>
+
+<hr>
+
+<div class="th"><a class="zt">流程号: </a><input type="text" class="tex">
+</div>
+<div class="th"><a class="zt">启动时间: </a> <input type="date" class="tex"></div>
+<div class="th"><a class="zt">备注: </a><input type="text" class="tex"></div>
+<div class="th"> <span><button type="text" name="" value="" class="butt">复制</button>
+    <button type="text1" name="" value="" class="butt">编辑</button></span></div>
+<div style="display: inline-block">
+    <div><a class="zt">状态: </a></div>
+    <div style="float:left; margin-left: 60px">
+        <label class="switch">
+            dd <input type="checkbox" name="check" checked>
+            <div class="slider round"></div>
+        </label>
+    </div>
+</div>
+<div style="width:1300px;height: 130px;border: 1px solid #bdbcbc;background: #FFFFFF;border-radius: 35px;margin-top: 10px">
+    <div class="Yx">1</div>
+    <div class="Yx">2</div>
+    <div class="Yx">3</div>
+    <div class="Yx">4</div>
+
+</div>
+
+</body>
+</html>
