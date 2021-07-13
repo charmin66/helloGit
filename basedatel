@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            padding: 0px;
+            margin: auto;
+            width: 1300px;
+            height: auto;
+            background: #fffbfb;
+           position: relative;
+        }
+        .th{
+            display: inline-block;
+            width: 310px;
+            height: 100px;
+            border: 1px solid #bebebf;
+            border-radius: 20px;
+            margin-top: 60px;
+            background: #FFFFFF;
+        }
+        .zt{
+            font-family: 微软雅黑;
+            font-size: 20px;
+
+        }
+        .tex {
+            height: 30px;
+            width: 200px;
+            margin-top: 30px;
+        }
+        .butt{
+            height: 30px;
+            width: 100px;
+            background-image: linear-gradient(to bottom right, #e34070, #54c743, #e84921);
+            color: #FFFFFF;
+            border-radius:8px ;
+            margin-top: 30px;
+
+        }
+        .Yx{
+            display: inline-block;
+        }
+        .dw{
+            margin-top: 34px;
+            margin-left: 34px;
+            background-color: #95dede;
+            border: none;
+            height: 90px;
+            width: 90px;
+            border-radius: 100%;
+
+        }
+        .db{
+           margin-top: -1%;
+           margin-left: 45px;
+
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {display:none;}
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #09f13c;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 100px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        .zhezhao{
+            position: fixed;
+            left: 0px;
+            top: 0px;
+           border: 1px solid black;
+            width: 100%;
+            height: 100%;
+
+        }
+        .tankuang{  /* 弹框下半部分 */
+            position: relative;
+            background-image: linear-gradient(to bottom right, #ffffff, #fdf1f1, #fdf9f2);
+            width: 800px;
+            height: 600px;
+            border-radius: 5px;
+            margin: 5% auto;
+        }
+        #header{
+            height: 40px;
+            background-image: linear-gradient(to bottom right, #5235f5, #243fef, #0653ea);
+            text-align: center;
+        }
+        #header-right{ /* 右边的 X */
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            background: red;
+            color: #faf6f6;
+            right: 5px;
+            top: 5px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="th"><a class="zt">流程号: </a><input type="text" class="tex">
+</div>
+<div class="th"><a class="zt">启动时间: </a> <input type="date" class="tex"></div>
+<div class="th"><a class="zt">备注: </a><input type="text" class="tex"></div>
+<div class="th"> <span><button type="text" name="" value="" class="butt">复制</button>
+    <button type="text1" name="" value="" class="butt">编辑</button></span></div>
+<div style="display: inline-block">
+    <div><a class="zt">状态: </a></div>
+<div style="float:left; margin-left: 60px">
+    <label class="switch">
+       dd <input type="checkbox" name="check" checked>
+        <div class="slider round"></div>
+    </label>
+ </div>
+</div>
+<div style="width:1300px;height: 160px;border: 1px solid #bdbcbc;background: #FFFFFF;border-radius: 35px;margin-top: 10px">
+    <div class="Yx"><input name="123" type="button" value="1" class="dw" onclick="dianwo()"><p class="db">技术包裹</p></div>
+    <div class="Yx"><input name="123" type="button" value="2" class="dw" ><p class="db">斩刀试做</p></div>
+    <div class="Yx"><input name="123" type="button" value="3" class="dw" ><p class="db">量产试做</p></div>
+    <div class="Yx"><input name="123" type="button" value="4" class="dw" ><p class="db">小批量试做</p></div>
+
+
+</div>
+
+<hr>
+
+<div class="th"><a class="zt">流程号: </a><input type="text" class="tex">
+</div>
+<div class="th"><a class="zt">启动时间: </a> <input type="date" class="tex"></div>
+<div class="th"><a class="zt">备注: </a><input type="text" class="tex"></div>
+<div class="th"> <span><button type="text" name="" value="" class="butt">复制</button>
+    <button type="text1" name="" value="" class="butt">编辑</button></span></div>
+<div style="display: inline-block">
+    <div><a class="zt">状态: </a></div>
+    <div style="float:left; margin-left: 60px">
+        <label class="switch">
+            dd <input type="checkbox" name="check" checked>
+            <div class="slider round"></div>
+        </label>
+    </div>
+</div>
+<div style="width:1300px;height: 160px;border: 1px solid #bdbcbc;background: #FFFFFF;border-radius: 35px;margin-top: 10px">
+    <div class="Yx"><input name="123" type="button" value="1" class="dw" onclick="dianwo()"><p class="db">技术包裹</p></div>
+    <div class="Yx"><input name="123" type="button" value="2" class="dw" ><p class="db">斩刀试做</p></div>
+    <div class="Yx"><input name="123" type="button" value="3" class="dw" ><p class="db">量产试做</p></div>
+    <div class="Yx"><input name="123" type="button" value="4" class="dw" ><p class="db" >小批量试做</p></div>
+    <div class="zhezhao" id='zhezhao'>
+        <div class="tankuang">
+
+            <a href="Dergck.html" id="wck"></a>
+            <div id="header">
+                <span>弹窗</span>
+                <div id="header-right" onclick="hidder()">x</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById('zhezhao').style.display="none";
+        function dianwo(){
+            document.getElementById('zhezhao').style.display="";
+        }
+        function hidder(){
+            document.getElementById('zhezhao').style.display="none";
+        }
+
+
+    </script>
+
+
+</div>
+
+</body>
+</html>
